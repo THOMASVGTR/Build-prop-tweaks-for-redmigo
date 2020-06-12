@@ -15,4 +15,5 @@ After downloading this zip file then unzip it.
 This is the original zip file of the module. Flash this unzipped zip file.  
 
 # Download Link:
-https://github.com/THOMASVGTR/Build-prop-tweaks-for-redmigo
+https://github.com/THOMASVGTR/All-Zipped-MODULE-Files
+
