@@ -1,0 +1,8 @@
+id=BuildPropTweaks
+name=Build Prop Tweaks Only Redmi Go
+version=2.0
+versionCode=2000
+author=ThomasV (BANGLADESH)
+description=BUILD PROP TWEAKS FOR REDMI GO
+minMagisk=1500
+builddate=2020/05/25 11:00PM

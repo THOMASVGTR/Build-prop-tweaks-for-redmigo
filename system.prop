@@ -1,0 +1,1296 @@
+# This file will be read by resetprop
+# Example: Change dpi
+#ro.sf.lcd_density=450
+ro.control_privapp_permissions=disable
+ro.system.build.fingerprint=Xiaomi/tiare/tiare:10.0/OPM1.171019.026/V10.2.18.0.OCLMIXM:user/release-keys
+ro.system.build.tags=release-keys
+ro.system.build.type=user
+ro.product.system.brand=Xiaomi
+ro.product.system.device=tiare
+ro.product.system.manufacturer=Xiaomi
+ro.product.system.model=Redmi Go
+ro.product.system.name=tiare
+ro.build.display.id=OPM1.171019.026.V10.2.18.0.OCLMIXM
+ro.build.type=user
+ro.build.user=$THOMASV$
+ro.build.host=mi-server
+ro.build.tags=release-keys
+ro.build.flavor=tiare-user
+ro.build.ab_update=true
+ro.product.model=Redmi Go
+ro.product.brand=Xiaomi
+ro.product.name=tiare
+ro.product.device=tiare
+
+# ro.product.cpu.abi and ro.product.cpu.abi2 are obsolete,
+# use ro.product.cpu.abilist instead.
+ro.product.cpu.abi=armeabi-v7a
+ro.product.cpu.abi2=armeabi
+ro.product.cpu.abilist=armeabi-v7a,armeabi
+ro.product.cpu.abilist32=armeabi-v7a,armeabi
+ro.product.cpu.abilist64=armeabi-v7a,armeabi
+ro.product.manufacturer=Xiaomi
+ro.product.locale=en-US
+ro.wifi.channels=14
+# ro.build.product is obsolete; use ro.product.device
+ro.build.product=tiare
+# Do not try to parse description, fingerprint, or thumbprint
+ro.build.description=tiare-user 10.0 OPM1.171019.026 V10.2.18.0.OCLMIXM release-keys
+ro.build.fingerprint=Xiaomi/tiare/tiare:10.0/OPM1.171019.026/V10.2.18.0.OCLMIXM:user/release-keys
+ro.havoc.device=Redmi Go
+# end build properties
+
+#
+# from device/phh/treble/system.prop
+#
+ro.adb.secure=0
+#Some devices have sdcardfs kernel panicing on 8.0
+#Disable for everyone for the moment
+ro.sys.sdcardfs=0
+persist.sys.overlay.nightmode=true
+
+#Disable debugging strict mode toasts
+persist.sys.strictmode.disable=true
+persist.sys.phh.mainkeys=1
+
+fw.max_users=10
+persist.sys.max_profiles=10
+# end of device/phh/treble/system.prop
+
+#
+# from build/make/target/board/gsi_system.prop
+#
+# GSI always generate dex pre-opt in system image
+ro.cp_system_other_odex=0
+
+# GSI always disables adb authentication
+ro.adb.secure=0
+
+# GSI disables non-AOSP nnapi extensions on product partition
+ro.nnapi.extensions.deny_on_product=true
+
+# TODO(b/120679683): disable RescueParty before all problem apps solved
+persist.sys.disable_rescue=true
+
+# TODO(b/78105955): disable privapp_permissions checking before the bug solved
+ro.control_privapp_permissions=disable
+
+# TODO(b/136212765): the default for LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
+# end of build/make/target/board/gsi_system.prop
+
+#vendor props
+
+debug.sf.enable_hwc_vds=1
+debug.sf.hw=1
+debug.sf.latch_unsignaled=1
+debug.egl.hw=1
+persist.hwc.mdpcomp.enable=true
+debug.mdpcomp.logs=0
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
+debug.enable.sglscale=1
+sdm.debug.disable_skip_validate=1
+debug.sf.recomputecrop=0
+sys.hwc.gpu_perf_mode=1
+persist.sys.bg_proc_mgmt=true
+
+#
+debug.qctwa.statusbar=1
+debug.qc.hardware=true
+com.qc.hardware=true
+debug.qctwa.preservebuf=1
+ro.config.dha_tunable=1
+
+persist.cne.feature=1
+#+ExtB HONGMI-50484, wuxuanhang.wt, modify for hongmi disable NSRM 20181004
+persist.dpm.feature=1
+#-ExtB HONGMI-50484, wuxuanhang.wt, modify for hongmi disable NSRM 20181004
+
+# TODO(b/136212765): the default for LMK
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=100
+ro.lmk.use_minfree_levels=true
+# end of build/make/target/board/gsi_system.prop
+
+#
+#System property for FM transmitter
+#
+ro.fm.transmitter=true
+
+# system prop for UBWC
+video.disable.ubwc=1
+
+# system prop to disable split mode
+vendor.vidc.disable.split.mode=1
+
+# system property to accelerate Progressive Download using STA
+persist.mm.sta.enable=0
+
+ro.use_data_netmgrd=true
+persist.data.netmgrd.qos.enable=true
+persist.data.mode=concurrent
+
+#system props for time-services
+persist.timed.enable=true
+
+# System property for cabl
+ro.qualcomm.cabl=0
+
+#chk8326, wuxuanhang.wt, modify to not support CDMA, 20180914
+telephony.lteOnCdmaDevice=1
+#
+
+# System prop to turn on hfp client
+bluetooth.hfp.client=1
+
+#
+#System property for FM transmitter
+#
+ro.fm.transmitter=true
+
+
+
+#property to enable user to access Google WFD settings
+persist.debug.wfd.enable=1
+#propery to enable VDS WFD solution
+persist.hwc.enable_vds=1
+
+#selects CoreSight configuration to enable
+persist.debug.coresight.config=stm-events
+
+#selects Console configuration to enable
+persist.console.silent.config=1
+
+#property for vendor specific library
+ro.vendor.at_library=libqti-at.so
+ro.vendor.gt_library=libqti-gt.so
+
+#property to enable narrow search range for video encoding
+vendor.vidc.enc.narrow.searchrange=1
+
+#property to enable fingerprint
+persist.qfp=true
+
+#min/max cpu in core control
+ro.vendor.qti.core_ctl_min_cpu=2
+ro.vendor.qti.core_ctl_max_cpu=4
+
+#HWUI properties
+ro.hwui.texture_cache_size=72
+ro.hwui.layer_cache_size=48
+ro.hwui.r_buffer_cache_size=8
+ro.hwui.path_cache_size=32
+ro.hwui.gradient_cache_size=1
+ro.hwui.drop_shadow_cache_size=6
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=1024
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=2048
+ro.hwui.text_large_cache_height=2048
+
+#Enable B service adj transition by default
+ro.vendor.qti.sys.fw.bservice_enable=true
+ro.vendor.qti.sys.fw.bservice_limit=5
+ro.vendor.qti.sys.fw.bservice_age=5000
+
+# Enable Delay Service Restart
+ro.vendor.qti.am.reschedule_service=true
+
+
+#Trim properties
+ro.vendor.qti.sys.fw.use_trim_settings=true
+ro.vendor.qti.sys.fw.empty_app_percent=50
+ro.vendor.qti.sys.fw..trim_empty_percent=100
+ro.vendor.qti.sys.fw..trim_cache_percent=100
+ro.vendor.qti.sys.fw..trim_enable_memory=2147483648
+
+# Create zram disk
+ro.vendor.qti.config.zram=true
+
+#Create swap disk, if below sys-prop enabled & also if device has lower (1 GB ) RAM
+ro.vendor.qti.config.swap=true
+
+#fix transparency and GUI glitches
+debug.hwui.renderer.opengl
+
+#set device emmc size
+ro.emmc_size=8GB
+
+#force HAL1 for below packages
+camera.hal1.packagelist=com.skype.raider,com.google.android.talk
+
+#properties for limiting preview size in camera
+persist.vendor.camera.display.umax=1920x1080
+persist.vendor.camera.display.lmax=1280x720
+
+#set cutoff voltage to 3200mV
+ro.cutoff_voltage_mv=3200
+dalvik.vm.extra-opts=-Xcompiler-option --inline-max-code-units=0
+
+#chk8333 add by puliang 20180913
+persist.vendor.ims.dropset_feature=1
+
+#chk8332 add by xunyuan1 20180914
+persist.vendor.radio.force_on_dc=true
+ro.product.wcn_default_name=Redmi Go
+
+#chk10171 puliang.wt add,20181004
+ro.fota.oem=Xiaomi
+ro.build.software.version=Android_10.0
+
+#extb51459 puliang.wt add 20181016
+persist.vendor.qti.telephony.vt_cam_interface=1
+
+#set bt mac address modem NV support
+persist.vendor.bluetooth.modem_nv_support=true
+
+#bug408864  puliang.wt  add for battery charging off if CALL_STATE_OFFHOOK
+persist.sys.chgdisabled=0
+
+#bug410253  weiqiang.wt  audioparaver-version
+ro.xiaomi.audioparaver=C3G-PVT-V16-2018-12-30
+
+
+#bug 418110 GCF FT need support vowifi, add by zhanglei6_wt 2018/12/30
+persist.data.iwlan.enable=true
+
+#extb HONGMI-54040 ignore the wifi is acceptUnvalidated or pretendValidated yangxu.wt 20181113
+ro.telephony.ignore_wifi_useless=1
+
+#extb HONGMI-56567 recent key JANKs
+debug.hwui.use_buffer_age=false
+
+#speedfreak tweaks
+ro.sys.fw.dex2oat_thread_count=4
+dalvik.vm.boot-dex2oat-threads=4
+dalvik.vm.dex2oat-threads=4
+dalvik.vm.image-dex2oat-threads=4
+dalvik.vm.dex2oat-filter=speed
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.checkjni=false
+dalvik.vm.dexopt-data-only=1
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heapsize=256m
+persist.sys.dalvik.hyperthreading=true
+dalvik.vm.verify-bytecode=false
+dalvik.vm.execution-mode=int:jit
+dalvik.vm.lockprof.threshold=250
+dalvik.vm.dexopt-flags=m=v,o=y,u=n,v=n,v=o,u=v
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+dalvik.vm.jmiopts=forcecopy
+dalvik.vm.heaptargetutilization=0.75
+dalvik.vm.heapminfree=256k
+dalvik.vm.heapmaxfree=8m
+persist.sys.dalvik.vm.lib=libdvm.so
+power.saving.mode=1
+sys.use_fifo_ui=1
+qemu.hw.mainkeys=1   
+wifi.supplicant_scan_interval=300
+dalvik.vm.usejitprofiles=speed
+ro.zygote.disable_gl_preload=true
+hwui.use_gpu_pixel_buffers=true
+dalvik.vm.usejitprofiles=speed
+com.qc.hardware=true
+debug.composition.type=gpu
+debug.egl.hw=1
+debug.egl.profiler=1
+debug.enabletr=true
+debug.gralloc.enable_fb_ubwc=1
+debug.overlayui.enable=1
+debug.performance.tuning=1
+debug.qc.hardware=true
+debug.qctwa.preservebuf=1
+debug.qctwa.statusbar=1
+debug.sf.hw=1
+debug.sf.latch_unsignaled=1
+dev.pm.dyn_samplingrate=1
+hw3d.force=1
+hwui.render_dirty_regions=true
+ro.config.enable.hw_accel=true
+ro.fb.mode=1
+ro.product.gpu.driver=1
+ro.sf.compbypass.enable=0
+
+#mtp
+ro.sys.usb.storage.type=mtp,mass_storage
+
+
+#extb52613 yuanhui.wt add 20181109
+debug.sf.disable_backpressure=1
+ro.lmk.medium=800
+ro.lmk.critical=0
+ro.lmk.downgrade_pressure=60
+ro.vendor.qti.config.ulmk_memcg=true
+dalvik.vm.systemservercompilerfilter=speed-profile
+
+#Better Scrolling
+windowsmgr.max_events_per_sec=150
+ro.min_pointer_dur=8
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+persist.sys.scrollingcache=3
+debug.sf.hw=1
+
+#Better Internet Speed
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+#Modify Logcat
+logcat.live=disable
+
+#Disable Black Screen Issue After Call
+mot.proximity.delay=0
+ro.lge.proximity.delay=25
+
+#Ring Your Phone Immediately
+ro.telephony.call_ring.delay=0
+ring.delay=0
+
+#Improve Voice Call Clarity
+ro.ril.enable.amr.wideband=1
+ro.config.vc_call_steps=20
+
+#Improve Image Quality
+video.accelerate.hw=1
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.jpeg.quality=100,100,100
+persist.sys.use_dithering=1
+
+#Quick Power On
+ro.config.hw_quickpoweron=true
+
+#Modify Error Profiler
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+
+#Keep Your Launcher In Memory
+ro.HOME_APP_ADJ = 1
+
+#Save Power
+ro.mot.eri.losalert.delay=1000  //this may brake tethering
+ro.ril.power_collapse=1
+pm.sleep_mode=1
+wifi.supplicant_scan_interval=180
+ro.mot.eri.losalert.delay=1000
+power_supply.wakeup=enable
+ro.config.hw_fast_dormancy=1
+ro.config.hw_power_saving=1
+
+#Disable Automatic Error Reporting
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+ro.kernel.checkjni=0
+ro.kernel.android.checkjni=0
+persist.android.strictmode=0
+
+#Improve Gaming Experience
+persist.sys.NV_FPSLIMIT=60
+persist.sys.NV_POWERMODE=1
+persist.sys.NV_PROFVER=15
+persist.sys.NV_STEREOCTRL=0
+persist.sys.NV_STEREOSEPCHG=0
+persist.sys.NV_STEREOSEP=20
+persist.sys.purgeable_assets=1
+
+debug.enabletr=true
+debug.qctwa.preservebuf=1
+dev.pm.dyn_samplingrate=1
+video.accelerate.hw=1
+ro.vold.umsdirtyratio=20
+debug.overlayui.enable=1
+debug.egl.hw=1
+ro.fb.mode=1
+hw3d.force=1
+persist.sys.ui.hw=1
+ro.sf.compbypass.enable=0
+debug.sf.hw=1
+debug.composition.type=gpu
+persist.sys.composition.type=gpu
+debug.performance.tuning=1
+
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.dec.aud.wma.enabled=1
+ro.media.dec.vid.wmv.enabled=1
+ro.media.cam.preview.fps=0
+ro.media.codec_priority_for_thumb=so
+
+#Modify MMS APN Retry Timer
+ro.gsm.2nd_data_retry_config=max/_retries=3, 3000, 3000, 3000
+
+# Improve Touch Responsiveness via Hardware Rendering
+debug.sf.hw=1
+persist.sys.ui.hw=1
+debug.performance.tuning=1
+video.accelerate.hw=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
+
+#Stream Videos Faster
+media.stagefright.enable-player=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-http=true
+media.stagefright.enable-rtsp=true
+media.stagefright.enable-record=true
+
+#Support for ipv4 and ipv6
+persist.telephony.support.ipv6=1
+persist.telephony.support.ipv4=1
+
+#Disables sending of usage data
+ro.config.nocheckin=1
+
+# battery life
+wifi.supplicant_scan_interval=180
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+
+#improved performance
+debug.performance.tuning=1
+
+#Enable Camera2API
+persist.camera.HAL3.enabled = 1
+persist.vendor.camera.HAL3.enabled = 1
+persist.camera.stats.test = 5
+persist.vendor.camera.stats.test = 5
+persist.camera.eis.enable = 1
+persist.camera.qcwnr.enabled = 0
+persist.camera.qctnr.enabled = 0
+persist .camera.snap.format = 0
+
+
+#Navigation buttons On Screen
+qemu.hw.mainkeys=1
+
+#16bit Transparency
+persist.sys.use_16bpp_alpha=1
+
+#3G tweaks
+ro.ril.hsxpa=1
+ro.ril.gprsclass=10
+ro.ril.hep=1
+ro.ril.enable.dtm=1
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+ro.ril.enable.amr.wideband=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=14449
+ro.ril.hsdpa.category=8
+ro.ril.hsupa.category=6
+ro.ril.set.mtu1472=1
+ro.ril.def.agps.feature=1
+ro.config.combined_signal=true
+persist.cust.tel.eons=1
+#
+# GSM=1, CDMA=2
+ro.ril.def.agps.feature=1
+#
+ro.ril.cdma.ppp.up=1
+ro.ril.enable.sdr=1
+ro.ril.enable.gea3=1
+ro.ril.enable.fd.plmn.prefix=23402,23410,23411
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+ro.ril.enable.dtm=1
+ro.ril.disable.power.collapse=1
+persist.ril.uart.flowctrl=10
+ro.mot.eri.losalert.delay=2000
+ro.ril.enable.amr.wideband=1
+ro.config.hw_fast_dormancy=0
+ro.semc.enable.fast_dormancy=true
+persist.radio.add_power_save=1
+
+# Zram Tweaks
+persist.service.zram=0
+ro.zram.default=0
+
+# Wireless + TCP Speed & Security Tweaks
+net.core.wmem_max=1048576
+net.core.rmem_max=1048576
+net.core.rmem_default=262144
+net.core.wmem_default=262144
+net.core.optmem_max=20480
+net.unix.max_dgram_qlen=50
+#
+# Define TCP buffer sizes for various networks
+#   ReadMin, ReadInitial, ReadMax, WriteMin, WriteInitial, WriteMax
+#
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.lte=262144,524288,3145728,262144,524288,3145728
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.evdo=4096,87380,563200,4096,16384,262144
+net.tcp.buffersize.evdo_b=6144,262144,1048576,6144,262144,1048576
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.hspa=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.hspap=4096,87380,1220608,4096,16384,393216
+net.tcp.buffersize.hsupa=4096,87380,704512,4096,16384,262144
+net.tcp.buffersize.hsdpa=6144,262144,1048576,6144,262144,1048576
+
+# IPv4
+net.ipv4.tcp_ecn=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_timestamps=0
+net.ipv4.tcp_rmem='6144 87380 1048576'
+net.ipv4.tcp_wmem='6144 87380 1048576'
+net.ipv4.tcp_mem='187000 187000 187000'
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.icmp_echo_ignore_all=1
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv4.conf.all.accept_redirects=0
+net.ipv4.conf.default.accept_redirects=0
+net.ipv4.conf.all.rp_filter=1
+net.ipv4.conf.default.rp_filter=1
+net.ipv4.conf.all.send_redirects=0
+net.ipv4.conf.default.send_redirects=0
+net.ipv4.conf.all.secure_redirects=0
+net.ipv4.conf.default.secure_redirects=0
+net.ipv4.conf.all.accept_source_route=0
+net.ipv4.conf.default.accept_source_route=0
+net.ipv4.udp_rmem_min=6144
+net.ipv4.udp_wmem_min=6144
+net.ipv4.tcp_tw_recycle=1
+net.ipv4.tcp_tw_reuse=1
+net.ipv4.tcp_syncookies=1
+net.ipv4.tcp_synack_retries=2
+net.ipv4.tcp_syn_retries=2
+net.ipv4.tcp_max_syn_backlog=1024
+net.ipv4.tcp_max_tw_buckets=16384
+net.ipv4.icmp_echo_ignore_broadcasts=1
+net.ipv4.icmp_ignore_bogus_error_responses=1
+net.ipv4.tcp_fin_timeout=15
+net.ipv4.tcp_keepalive_intvl=30
+net.ipv4.tcp_keepalive_probes=5
+net.ipv4.tcp_keepalive_time=1800
+net.ipv4.ip_forward=0
+#
+net.tcp.default_init_rwnd=60
+#
+# IPv6
+net.ipv6.conf.all.accept_redirects=0
+net.ipv6.conf.default.accept_redirects=0
+net.ipv6.conf.all.use_tempaddr=2
+net.ipv6.conf.default.use_tempaddr=2
+
+# Disable IPv6
+net.ipv6.conf.all.disable_ipv6=1     #echo "0" > /proc/sys/net/ipv6/conf/wlan0/disable_ipv6
+net.ipv6.conf.default.disable_ipv6=1
+net.ipv6.conf.$WIFI.disable_ipv6=1
+
+# NetworkLocationProvider and LocationCollector
+ro.com.google.locationfeatures=1
+
+### AC!D Sound Tweaks by TEAM AC!D ###
+ro.audio.samplerate=48000
+persist.audio.vr.enable=true
+persist.htc.audio.pcm.samplerate=48000
+htc.audio.swalt.enable=1
+htc.audio.swalt.mingain=14512
+htc.audio.alc.enable=1
+af.resample=52000
+persist.audio.SupportHTCHWAEC=1
+ro.service.swiqi2.supported=true
+persist.service.swiqi2.enable=1
+
+# Resampling
+af.resampler.quality=255
+persist.af.resampler.quality=255
+persist.dev.pm.dyn_samplingrate=1
+
+# Awesome Beats Engine
+persist.audio.fluence.mode=endfire
+persist.audio.hp=true
+htc.audio.global.state=0
+htc.audio.lpa.a2dp=0
+htc.audio.global.profile=0
+htc.audio.q6.topology=0
+htc.audio.enable_dmic=1
+persist.htc.audio.pcm.channels=2
+
+# Fps Properties
+ro.fps_enable=1
+ro.fps.capsmin=25fps
+ro.fps.capsmax=30fps
+
+# Internet Properties
+persist.internet.support.ipv6=1 
+persist.internet.support.ipv4=1
+persist.dns.support.ipv6=1
+persist.dns.support.ipv4=1
+persist.telephony.support.ipv6=1 
+persist.telephony.support.ipv4=1
+persist.dhcp.support.ipv6=1
+persist.dhcp.support.ipv4=1
+persist.dnla.support.ipv6=1
+persist.dnla.support.ipv4=1
+persist.web.support.ipv6=1
+persist.web.support.ipv4=1
+persist.tcp.support.ipv6=1
+persist.tcp.support.ipv4=1
+persist.udp.support.ipv6=1
+persist.udp.support.ipv4=1
+persist.voip.support.ipv6=1
+persist.voip.support.ipv4=1
+persist.dns2.support.ipv6=1
+persist.dns2.support.ipv4=1
+
+#Bootanimation Properties
+boot.fps=25
+
+#System Properties
+cpu.fps=30
+gpu.fps=30
+
+# Fps Properties
+ro.fps_enable=1
+ro.fps.capsmin=25fps
+ro.fps.capsmax=30fps
+
+# Internet Properties
+persist.internet.support.ipv6=1 
+persist.internet.support.ipv4=1
+persist.dns.support.ipv6=1 
+persist.dns.support.ipv4=1
+persist.telephony.support.ipv6=1 
+persist.telephony.support.ipv4=1
+persist.dhcp.support.ipv6=1 
+persist.dhcp.support.ipv4=1
+persist.dnla.support.ipv6=1 
+persist.dnla.support.ipv4=1
+persist.web.support.ipv6=1 
+persist.web.support.ipv4=1
+persist.tcp.support.ipv6=1 
+persist.tcp.support.ipv4=1
+persist.udp.support.ipv6=1 
+persist.udp.support.ipv4=1
+persist.voip.support.ipv6=1 
+persist.voip.support.ipv4=1
+persist.dns2.support.ipv6=1 
+persist.dns2.support.ipv4=1
+
+# CPU & GPU Properties
+ro.sys.cpu.minfreq=960
+ro.sys.cpu.maxfreq=1401
+ro.sys.cpu.defaultfreq=auto
+ro.sys.gpu.defaultfreq=auto
+ro.sys.gpu.minfreq=270
+ro.sys.gpu.maxfreq=598
+
+# Wireless Speed Tweaks
+net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.hsdpa=4096,87380,256960,4096,16384,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960
+net.ipv4.tcp_ecn=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_rmem=4096 39000 187000
+net.ipv4.tcp_wmem=4096 39000 187000
+net.ipv4.tcp_mem=187000 187000 187000
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_moderate_rcvbuf=1
+
+# Makes streaming videos stream faster
+media.stagefright.enable-player=true
+media.stagefright.enable-http=true
+media.stagefright.enable-aac=true
+media.stagefright.enable-qcp=true
+media.stagefright.enable-fma2dp=true
+media.stagefright.enable-scan=true
+media.stagefright.enable-meta=true
+media.stagefright.enable-rtsp=true
+media.stagefright.enable-record=true
+
+# Website Bypass
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# Graphics Enhancement
+video.accelerate.hw=1
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.jpeg.quality=100
+ro.media.dec.aud.wma.enabled=1
+ro.media.dec.vid.wmv.enabled=1
+
+# Performance
+debug.composition.type=gpu
+dev.pm.dyn_samplingrate=1
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+debug.performance.tuning=1
+debug.kill_allocating_task=0
+debug.overlayui.enable=1
+debug.enabletr=true
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.sf.hw=1
+hw3d.force=1
+hw2d.force=1
+hwui.render_dirty_regions=false
+hwui.disable_vsync=true
+force_hw_ui=true
+debug.kill_allocating_task=0
+ro.debuggable=1
+ro.config.disable.hw_accel=false
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+persist.sys.composition.type=gpu
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+persist.android.strictmode=0
+persist.sampling_profiler=0
+persist.splitwindow.support_all=true
+ro.min_pointer_dur=1
+ro.config.low_ram.mod=true
+ro.secure=0
+ro.config.dha_tunnable=1
+ro.wmt.blcr.enable=0
+
+
+# 16bit Transparency
+persist.sys.use_16bpp_alpha=1
+
+# More RAM
+
+persist.sys.purgeable_assets=1
+
+persist.service.pcsync.enable=0
+
+persist.service.lgospd.enable=0
+
+# Hardware Power Saving
+ro.config.hw_power_saving=true
+
+#Disable Miscellaneous Android Logging Stuff
+
+debugtool.anrhistory=0
+
+profiler.debugmonitor=false
+
+profiler.launch=false
+
+profiler.hung.dumpdobugreport=false
+
+# Increase some Performance
+
+ro.product.gpu.driver=1
+
+ENFORCE_PROCESS_LIMIT=false
+
+ro.wmt.blcr.enable=0
+
+# Performance
+
+debug.kill_allocating_task=0
+
+force_hw_ui=true
+
+ro.debuggable=1
+
+# Bass audio props
+
+tunnel.decode=false
+
+persist.sys.media.use-awesome=1
+
+sys.keep_app_1=com.bel.android.dspmanager
+
+ro.audio.samplerate=48000
+
+ro.audio.pcm.samplerate=48000
+
+af.resample=52000
+
+#Indicator_Hack
+
+captive_portal_detection_enabled=0
+
+dalvik.vm.dex2oat-filter=speed
+
+dalvik.vm.image-dex2oat-filter=speed
+
+# Rendering Tweaks
+debug.composition.type=gpu
+debug.egl.hw=1
+debug.enabletr=true
+debug.overlayui.enable=1
+debug.qctwa.preservebuf=1
+debug.performance.tuning=1
+debug.sf.hw=1
+dev.pm.dyn_samplingrate=1
+hw3d.force=1
+ro.config.disable.hw_accel=false
+ro.fb.mode=1
+ro.sf.compbypass.enable=0
+ro.vold.umsdirtyratio=20
+persist.sys.composition.type=gpu
+persist.sys.ui.hw=1
+video.accelerate.hw=1
+
+# Enable GPU Acceleration
+debug.sf.hw=1
+video.accelerate.hw=1
+debug.performance.tuning=1
+persist.sys.composition.type=gpu
+debug.qc.hardware=true
+debug.qctwa.statusbar=1
+debug.qctwa.preservebuf=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
+hw3d.force=1
+ro.product.gpu.driver=1
+persist.sys.use_16bpp_alpha=1
+persist.sampling_profiler=0
+hwui.render_dirty_regions=false
+hwui.disable_vsync=true
+
+# Sensor Sleep Control
+ro.ril.sensor.sleep.control=1
+
+# Allow purge of assets to free more ram
+persist.sys.purgeable_assets=1
+
+# More free ram and apps load faster
+dalvik.vm.dexopt-flags=m=y,u=n,o=v,v=n,u=v
+
+# More RAM
+#persist.sys.purgeable_assets=1
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+
+# Increase general Performance
+debug.performance.tuning=1
+
+# Increase some Performance
+ro.secure=0
+persist.sys.use_16bpp_alpha=1
+ro.product.gpu.driver=1
+ro.min.fling_velocity=8000
+
+# Reduce the black screen time of the proximity sensor
+ro.lge.proximity.delay=15
+mot.proximity.delay=15
+ro.ril.enable.amr.wideband=1
+
+# TOUCH
+touch.presure.scale=0.07
+
+# Better Scrolling responsiveness and speed
+windowsmgr.max_events_per_sec=150
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+ro.min_pointer_dur=8
+
+# Smoothens UI
+persist.service.lgospd.enable=0
+persist.service.pcsync.enable=0
+ro.ril.enable.a52=1
+ro.ril.enable.a53=0
+
+
+# Miscellaneous Tweaks for performance
+ro.config.hw_menu_unlockscreen=false
+persist.sys.use_dithering=0
+persist.sys.purgeable_assets=1
+dalvik.vm.dexopt-flags=m=y,u=n,o=v,v=n,u=v
+ro.mot.eri.losalert.delay=1000
+
+# Better internet browsing & download speed
+net.tcp.buffersize.default=4096,87380,256960,4096, 16384,256960
+net.tcp.buffersize.wifi=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.umts=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.gprs=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.edge=4096,87380,256960,4096,163 84,256960
+net.tcp.buffersize.hspa=6144,87380,524288,6144,163 84,262144
+net.tcp.buffersize.lte=524288,1048576,2097152,5242 88,1048576,2097152
+net.tcp.buffersize.hsdpa=6144,87380,1048576,6144,8 7380,1048576
+net.tcp.buffersize.evdo_b=6144,87380,1048576,6144, 87380,1048576
+
+# 3G signal and speed tweaks
+ro.ril.hsxpa=2
+ro.ril.gprsclass=10
+ro.ril.hep=1
+ro.ril.enable.dtm=1
+ro.ril.hsdpa.category=10
+ro.ril.enable.a53=1
+ro.ril.enable.3g.prefix=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=14449
+ro.ril.hsupa.category=7
+ro.ril.hsdpa.category=10
+ro.ril.enable.a52=1
+ro.ril.set.mtu1472=1
+persist.cust.tel.eons=1
+ro.config.hw_fast_dormancy=1
+
+# GOOGLE DNS
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+
+# CRT
+persist.sys.screen_off=crt
+persist.sys.screen_on=none
+
+# Support For IPV4 and IPV6
+persist.telephony.support.ipv6=1
+persist.telephony.support.ipv4=1
+
+#
+ro.com.google.locationfeatures=1
+ro.com.google.networklocation=1
+htc.audio.alt.enable=0
+htc.audio.hac.enable=0
+
+# Wireless Tweaks
+net.ipv4.ip_no_pmtu_disc=0
+net.ipv4.route.flush=1
+net.ipv4.tcp_ecn=0
+net.ipv4.tcp_fack=1
+net.ipv4.tcp_mem=187000 187000 187000
+net.ipv4.tcp_moderate_rcvbuf=1
+net.ipv4.tcp_no_metrics_save=1
+net.ipv4.tcp_rfc1337=1
+net.ipv4.tcp_rmem=4096 39000 187000
+net.ipv4.tcp_sack=1
+net.ipv4.tcp_timestamps=1
+net.ipv4.tcp_window_scaling=1
+net.ipv4.tcp_wmem=4096 39000 18700
+wifi.supplicant_scan_interval=180
+
+# Video Acceleration Enabled And HW debugging
+video.accelerate.hw=1
+debug.sf.hw=1
+debug.performance.tuning=1
+debug.egl.profiler=1 # Measure rendering time in adb shell dumpsys gfxinfo
+debug.egl.hw=1
+debug.composition.type=gpu # Disable hardware overlays and use GPU for screen compositing
+
+# Disable logcat
+
+logcat.live=disable
+
+# Better image quality, lower performance.
+
+persist.sys.use_dithering=1
+
+
+# Qualcomm tweaks
+com.qc.hardware=1
+debug.qc.hardware=true
+debug.qctwa.preservebuf=1
+debug.qctwa.statusbar=1
+
+# Bass audio props for Lolipop
+tunnel.decode=true
+lpa.use-stagefright=true
+persist.sys.media.use-awesome=1
+sys.keep_app_1=com.bel.android.dspmanager
+ro.audio.samplerate=48000
+ro.audio.pcm.samplerate=48000
+af.resampler.quality=255
+af.resample=52000
+
+# Audio Tweaks
+persist.audio.fluence.mode=endfire
+persist.audio.hp=true
+persist.audio.vr.enable=true
+persist.audio.handset.mic=digital
+persist.audio.lowlatency.rec=true
+
+#Zram Mods
+persist.service.zram=0
+ro.zram.default=0
+
+#UI Tweaks
+persist.sys.ui.hw=1
+view.scroll_friction=10
+debug.composition.type=gpu
+debug.performance.tuning=1
+
+#you can use multiwindow for all apps
+#Default value is false, edit to true
+persist.splitwindow.support_all=true
+
+#Multi Users
+fw.max_users=30
+fw.show_multiuserui=1
+
+#More volume steps in call. (default is 6)
+ro.config.vc_call_steps=20
+
+#Default volume in call. (default is 3)
+ro.config.vc_call_default=10
+
+#Increase Quality Of Media Streaming (add to #system props for the MM modules)
+media.stagefright.enable-meta=true
+media.stagefright.enable-rtsp=true
+
+#makes apps load faster and frees more ram.
+dalvik.vm.dexopt-flags=m=y,v=n,o=v,u=n
+
+# Increase camera's photo and video recording quality
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+ro.media.enc.hprof.vid.fps=65
+
+# Better Flashlight intensity and camera-flash quality
+ro.media.capture.flash=led
+ro.media.capture.flashMinV=3300000
+ro.media.capture.torchIntensity=40
+ro.media.capture.flashIntensity=70
+ro.media.capture.maxres=8m
+ro.media.capture.fast.fps=4
+ro.media.capture.slow.fps=120
+ro.media.panorama.defres=3264x1840
+ro.media.panorama.frameres=1280x720
+ro.camcorder.videoModes=true
+
+# Memory Management++ 00M
+vm.min_free_kbytes=8192
+pm.sleep_mode=1
+vm.oom_kill_allocating_task=0
+vm.panic_on_oom=0
+vm.dirty_background_ratio=60
+vm.dirty_ratio=95
+vm.vfs_cache_pressure=20
+vm.overcommit_memory=0
+vm.lowmem_reserve_ratio=96 96
+vm.page-cluster=3
+vm.overcommit_ratio=50
+vm.min_free_order_shift=4
+vm.laptop_mode=0
+vm.block_dump=0
+vm.oom_dump_tasks=1
+vm.swappiness=100
+vm.dirty_writeback_centisecs=2000
+vm.dirty_expire_centisecs=1000
+kernel.panic=30
+kernel.panic_on_oops=1
+kernel.msgmni=2048
+kernel.msgmax=65536
+kernel.random.read_wakeup_threshold=128
+kernel.random.write_wakeup_threshold=256
+kernel.shmmni=4096
+kernel.shmall=2097152
+kernel.shmmax=268435456
+kernel.sem=500 512000 64 2048
+kernel.sched_features=24189
+kernel.hung_task_timeout_secs=30
+kernel.sched_latency_ns=1000000
+kernel.sched_min_granularity_ns=100000
+kernel.sched_wakeup_granularity_ns=2000000
+kernel.sched_compat_yield=1
+kernel.sched_shares_ratelimit=256000
+kernel.sched_child_runs_first=0
+kernel.threads-max=524288
+fs.lease-break-time=20
+fs.file-max=524288
+fs.nr_open=1048576
+fs.inotify.max_queued_events=32000
+fs.inotify.max_user_instances=256
+fs.inotify.max_user_watches=10240
+vold.post_fs_data_done=1
+
+# Debug + LogCat
+debug.sf.hw=1
+ro.debuggable=1
+debug.hwui.render_dirty_regions=false
+debug.composition.type=gpu
+debug.performance.tuning=1
+debug.kill_allocating_task=0
+persist.sys.gmaps_hack=1
+debug.sf.ddms=0
+view.scroll_friction=10
+logcat.live=disable
+persist.android.strictmode=0
+
+# Disables data sent and logging
+ro.config.nocheckin=1
+profiler.force_disable_err_rpt=1
+profiler.force_disable_ulog=1
+
+# Disable USB Debugging PopUp
+persist.adb.notify=0
+persist.service.adb.enable=1
+
+# Misc
+ro.allow.mock.location=0
+persist.sys.ui.hw=1
+persist.sys.shutdown.mode=hibernate
+ro.warmboot.capability=1
+ro.config.hw_quickpoweron=true
+ro.ril.sensor.sleep.control=1
+ro.kernel.android.checkjni=0
+ro.kernel.checkjni=0
+ro.compcache.default=0
+ro.ext4fs=1
+ro.setupwizard.mode=disabled or disable??
+ro.setupwizard.mode=EMULATOR
+ro.config.hw_power_saving=1 or true??
+ro.mot.buttonlight.timeout=1
+power_supply.wakeup=enable
+
+# NetworkLocationProvider and LocationCollector
+ro.com.google.locationfeatures=1
+
+### AC!D Sound Tweaks by TEAM AC!D ###
+ro.audio.samplerate=48000
+persist.audio.vr.enable=true
+persist.htc.audio.pcm.samplerate=48000
+htc.audio.swalt.enable=1
+htc.audio.swalt.mingain=14512
+htc.audio.alc.enable=1
+af.resample=52000
+persist.audio.SupportHTCHWAEC=1
+ro.service.swiqi2.supported=true
+persist.service.swiqi2.enable=1
+
+# Sony Xloud & Clearbass+
+ro.semc.sound_effects_enabled=true
+ro.semc.xloud.supported=true
+persist.service.xloud.enable=1
+ro.semc.enhance.supported=true
+persist.service.enhance.enable=1
+ro.semc.clearaudio.supported=true
+persist.service.clearaudio.enable=1
+ro.sony.walkman.logger=1
+persist.service.walkman.enable=1
+ro.somc.clearphase.supported=true
+persist.service.clearphase.enable=1
+
+# Resampling
+af.resampler.quality=255
+persist.af.resampler.quality=255
+persist.dev.pm.dyn_samplingrate=1
+
+# System prop to select MPQAudioPlayer by default on mpq8064
+mpq.audio.decode=true
+
+# Awesome Beats Engine
+persist.audio.fluence.mode=endfire
+persist.audio.hp=true
+htc.audio.global.state=0
+htc.audio.lpa.a2dp=0
+htc.audio.global.profile=0
+htc.audio.q6.topology=0
+htc.audio.enable_dmic=1
+persist.htc.audio.pcm.channels=2
+
+# ViPER4Android Build.prop Tweaks
+
+lpa.decode=false
+lpa.releaselock=false
+lpa.use-stagefright=false
+tunnel.decode=false
+
+# Sound
+af.fast_track_multiplier = 1
+af.resampler.quality = 255
+audio.deep_buffer.media = true
+audio.dolby.ds2.hardbypass = false
+audio.offload.buffer.size.kb = 64
+audio .offload.gapless.enabled = true
+audio.offload.multiaac.enable = true
+= to true audio.offload.multiple.enabled
+audio.offload.passthrough = to true
+audio.offload.pcm.16bit.enable = to true
+audio.offload.pcm.24bit.enable = to true
+audio.offload.pcm.32bit.enable = to true
+audio .offload.track.enable = true
+audio.offload.video = false
+audio.parser.ip.buffer.size = 262144
+audio.safx.pbe.enabled = true
+audio_hal.period_size = 192
+media.stagefright.audio.sink = 280
+persist .audio.fluence.speaker = true
+persist.audio.fluence.voicecall = true
+persist.audio.fluence.voicerec = false
+persist.audio.hifi.volume = 73
+persist.audio.hifi = false
+ro.audio.hifi = true
+ro .qc.sdk.audio.fluencetype = none
+ro.qc.sdk.audio.ssr = false
+tunnel.audio.encode = false
+use.voice.path.for.pcm.voip = true
+
+
+#
+# ADDITIONAL_BUILD_PROPERTIES
+#
+ro.treble.enabled=true
+persist.debug.dalvik.vm.core_platform_api_policy=just-warn
+net.bt.name=Android
+keyguard.no_require_sim=true
+ro.carrier=BGDGP & ROBI
+ro.com.android.dataroaming=true
+net.tethering.noprovisioning=true
+ro.dalvik.vm.native.bridge=1
+ro.bionic.ld.warning=1
+ro.art.hiddenapi.warning=1
+ro.treble.enabled=true
+ro.services.whitelist.packagelist=com.google.android.gms
+persist.sys.dalvik.vm.lib.2=libart.so
+dalvik.vm.isa.arm.variant=cortex-a53
+dalvik.vm.isa.arm.features=default
+ro.kernel.android.checkjni=0
+dalvik.vm.lockprof.threshold=500
+dalvik.vm.image-dex2oat-filter=speed
+dalvik.vm.stack-trace-dir=/data/anr
+
+ro.expect.recovery_id=0x713e455382c1753b559a5f5af185929106763507000000000000000000000000
+
+
+import /vendor/package/vendor.prop
+
+import /system/vendor/vendor.prop
+
+
+
+#IMPORT REGIONALIZATION VENDOR PROP PATH LAST IN ORDER TO OVERRIDE PROPERTIES#
+import /persist/speccfg/vendor_persist.prop
+
+import /vendor/package/default.prop
+
+import /vendor/package/power.prop
