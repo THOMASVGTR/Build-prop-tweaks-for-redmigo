@@ -7,4 +7,9 @@ AUTHOR IS NOT RESPONSIBLE FOR YOUR DEVICE BRICKING or ANY KIND OF ISSUES.
 USE IT AT YOUR OWN RESPONSIBILITY.
 
 # INSTRUCTIONS
-Clone or download this module as zip and flash via magisk.
+Clone this module directly and make a zip of it.
+
+For DOWNLOADING AS ZIP INSTRUCTIONS:
+
+After downloading this zip file then unzip it.
+This is the original zip file of the module. Flash this unzipped zip file.  
